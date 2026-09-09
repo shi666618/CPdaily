@@ -1,5 +1,6 @@
 name: Attendance
 on:
+  workflow_dispatch:
   schedule:
     - cron: 45 22 * * *
 env:
