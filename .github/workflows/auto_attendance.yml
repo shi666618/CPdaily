@@ -17,7 +17,7 @@ jobs:
     - name: Install & Run
       run: |
         git clone https://gitlab.com/Boos4721/fucktodaystudy.git --depth=1 fuckTodayStudy
-        sed -i 's/tencentcloud_sdk_python==3.0.65/tencentcloud_sdk_python/; s/PyYAML==5.4.1/PyYAML/' fuckTodayStudy/requirements.txt
+        sed -i 's/==[0-9][0-9.]*//g' fuckTodayStudy/requirements.txt
         pip install -r fuckTodayStudy/requirements.txt
         mv config.yml fuckTodayStudy/config.yml
         mv system.yml fuckTodayStudy/login/system.yml 2>/dev/null || true
